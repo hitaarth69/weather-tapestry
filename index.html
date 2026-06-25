@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌤️ Global Weather Tapestry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header>
+            <h1>🌤️ Weather Tapestry</h1>
+            <p>Live 5‑day forecast for any city</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Enter a city (e.g., London, Tokyo, New York)"
+                    autofocus
+                />
+                <button id="search-btn">🔍 Search</button>
+            </div>
+            <div class="search-status" id="search-status"></div>
+        </div>
+
+        <!-- Current Weather -->
+        <section class="current-weather" id="current-weather">
+            <div class="current-left">
+                <h2 id="city-name">—</h2>
+                <div class="current-temp" id="current-temp">—</div>
+                <div class="current-condition" id="current-condition">—</div>
+                <div class="current-details">
+                    <span id="current-humidity">💧 —</span>
+                    <span id="current-wind">🌬️ —</span>
+                </div>
+            </div>
+            <div class="current-right">
+                <div class="weather-icon-large" id="current-icon">🌤️</div>
+            </div>
+        </section>
+
+        <!-- 5‑Day Forecast -->
+        <section class="forecast">
+            <h2>5‑Day Forecast</h2>
+            <div class="forecast-grid" id="forecast-grid">
+                <!-- Cards will be injected here -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>🌐 Powered by <a href="https://open-meteo.com/" target="_blank">Open‑Meteo</a> • Data updates in real time</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
