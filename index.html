@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🌤️ Global Weather Tapestry</title>
+    <title>🌤️ Global Weather Tapestry Pro</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="app">
+    <!-- Background Canvas for Particles -->
+    <canvas id="weather-canvas"></canvas>
+
+    <div class="app" id="app">
         <!-- Header -->
         <header>
             <h1>🌤️ Weather Tapestry</h1>
-            <p>Live 5‑day forecast for any city</p>
+            <p>Live forecast • Dynamic visuals • Global coverage</p>
         </header>
+
+        <!-- Controls (Unit Toggle + Location) -->
+        <div class="controls">
+            <button id="unit-toggle" class="btn-toggle">°C / °F</button>
+            <button id="location-btn" class="btn-location">📍 Use My Location</button>
+        </div>
 
         <!-- Search Section -->
         <div class="search-container">
             <div class="search-box">
-                <input
-                    type="text"
-                    id="city-input"
-                    placeholder="Enter a city (e.g., London, Tokyo, New York)"
-                    autofocus
-                />
+                <input type="text" id="city-input" placeholder="Enter a city..." autofocus />
                 <button id="search-btn">🔍 Search</button>
             </div>
             <div class="search-status" id="search-status"></div>
+            <!-- Search History Chips -->
+            <div class="history-chips" id="history-chips"></div>
         </div>
 
         <!-- Current Weather -->
@@ -34,10 +40,17 @@
             <div class="current-left">
                 <h2 id="city-name">—</h2>
                 <div class="current-temp" id="current-temp">—</div>
+                <div class="current-feelslike" id="current-feelslike">🌡️ Feels like —</div>
                 <div class="current-condition" id="current-condition">—</div>
                 <div class="current-details">
                     <span id="current-humidity">💧 —</span>
                     <span id="current-wind">🌬️ —</span>
+                    <span id="current-uv">☀️ UV —</span>
+                </div>
+                <!-- Sunrise / Sunset -->
+                <div class="sun-schedule" id="sun-schedule">
+                    <span id="sunrise-display">🌅 —</span>
+                    <span id="sunset-display">🌇 —</span>
                 </div>
             </div>
             <div class="current-right">
@@ -45,11 +58,19 @@
             </div>
         </section>
 
+        <!-- Hourly Forecast -->
+        <section class="hourly-forecast">
+            <h2>⏰ Hourly Forecast</h2>
+            <div class="hourly-scroll" id="hourly-scroll">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
         <!-- 5‑Day Forecast -->
         <section class="forecast">
-            <h2>5‑Day Forecast</h2>
+            <h2>📅 5‑Day Forecast</h2>
             <div class="forecast-grid" id="forecast-grid">
-                <!-- Cards will be injected here -->
+                <!-- Injected by JS -->
             </div>
         </section>
 
