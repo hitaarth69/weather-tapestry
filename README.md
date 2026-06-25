@@ -1,24 +1,25 @@
-# 🌤️ Global Weather Tapestry
+# 🌤️ Global Weather Tapestry Pro
 
-A real‑time, 5‑day weather forecast app that brings live weather data to life with a clean, glass‑morphism interface. Built with the free Open‑Meteo API — **no API key required**.
+An immersive, feature-rich weather app that combines live weather data with dynamic visuals, particle effects, and intelligent forecasting.
 
 ## 🚀 Live Demo
 [Click here to see it live!](https://your-username.github.io/weather-tapestry)
 
 ## ✨ Features
-- **Real‑time current weather** — temperature, humidity, wind speed, and weather condition.
-- **5‑day forecast** — daily high/low temperatures and weather icons.
-- **City search with geocoding** — type any city name; the app finds its coordinates automatically.
-- **Persistent last search** — your last searched city is saved in LocalStorage and loaded automatically.
-- **Dynamic weather icons** — maps Open‑Meteo weather codes to expressive emoji icons.
-- **Fully responsive** — works beautifully on desktop, tablet, and mobile.
-- **No API key required** — powered by the free and open Open‑Meteo API[reference:2].
+- **🌡️ °C / °F Toggle** — Switch units instantly; preference saved.
+- **📍 Use My Location** — One‑click weather for your current position.
+- **🔍 Search History** — Last 5 cities saved as clickable chips.
+- **🎨 Dynamic Backgrounds** — Gradients change based on weather (sunny, rainy, snowy, thunder, night).
+- **🌅 Sunrise / Sunset** — Displayed with a visual schedule.
+- **⏰ Hourly Forecast** — Scrollable 12‑hour breakdown with temps and precipitation probability.
+- **❄️ Particle Effects** — Real‑time rain or snow overlay on the canvas.
+- **📊 5‑Day Forecast** — Highs and lows with weather icons.
+- **💾 Persistent Storage** — Unit preference, last city, and history all saved locally.
 
 ## 🛠️ Built With
-- HTML5
-- CSS3 (Flexbox, Grid, glass‑morphism)
-- Vanilla JavaScript (ES6+)
-- [Open‑Meteo API](https://open-meteo.com/) — free, no‑key weather & geocoding APIs
-- LocalStorage API — for remembering your last city
+- HTML5 / CSS3 / Vanilla JS
+- [Open‑Meteo API](https://open-meteo.com/) — Free, no‑key weather & geocoding
+- HTML5 Canvas — Particle system (rain/snow)
+- LocalStorage — User preferences and history
 
 ## 📁 Project Structure
